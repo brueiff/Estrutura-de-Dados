@@ -11,7 +11,7 @@ public class P4 {
         for (int i = 0; i < 5; i++) {
             System.out.println("Digite o número" + (i + 1) + " /30");
             v1[i] = leia.nextInt();
-//            v2[i] = v1[i];
+            v2[i] = v1[i];
             if (v1[i] == 0) {
                 v2[i] = 1;
             }
