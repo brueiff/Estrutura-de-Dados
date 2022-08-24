@@ -22,15 +22,15 @@ public class P5 {
                 R[cont] = leia.nextInt();
                 if (R[cont] == G[cont]) {
                     soma = soma + 1;
-                }  
+                }
             }
             if (soma >= 6) {
-                    System.out.println("Aluno Aprovado");
-                } else {
-                    System.out.println("Aluno Reprovado");
-                }
-                soma = 0;
-                System.out.println("----------------");
+                System.out.println("Aluno Aprovado");
+            } else {
+                System.out.println("Aluno Reprovado");
+            }
+            soma = 0;
+            System.out.println("----------------");
         }
     }
 }
