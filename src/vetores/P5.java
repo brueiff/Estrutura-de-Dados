@@ -11,7 +11,7 @@ public class P5 {
         int[] G = new int[20];
         int[] R = new int[20];
         soma = 0;
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 5; i++) {
             System.out.println("Digite a resposta da questao " + i);
             G[i] = leia.nextInt();
         }

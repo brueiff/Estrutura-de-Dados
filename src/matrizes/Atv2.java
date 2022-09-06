@@ -2,7 +2,7 @@ package matrizes;
 
 public class Atv2 {
     public static void main(String[] args) {
-        var M = new int[6][6];
+        int[][] M = new int[6][6];
         int A = 1;
         int[] vetor = new int[36];
         for (int i = 0; i < 10; i++) {

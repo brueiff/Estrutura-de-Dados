@@ -25,18 +25,18 @@ public class Atv1 {
     }
 
     public static void main(String[] args) {
-        var M = new int[4][6];
-        var N = new int[4][6];
+        int[][] M = new int[4][6];
+        int[][] N = new int[4][6];
 
         System.out.println("Lendo matriz M");
         letMatriz(M);
         System.out.println("Lendo matriz N");
         letMatriz(N);
 
-        var produto = new int[4][6];
-        var soma = new int[4][6];
-        var diferenca = new int[4][6];
-        var divisao = new int[4][6];
+        int[][] produto = new int[4][6];
+        int[][] soma = new int[4][6];
+        int[][] diferenca = new int[4][6];
+        int[][] divisao = new int[4][6];
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 6; j++) {

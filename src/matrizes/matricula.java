@@ -6,7 +6,7 @@ public class matricula {
 
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
-        int[] aluno = new int[50];
+        int[] aluno = new int[55];
         int[] nota = new int[50];
         for (int i = 1; i < 3; i++) {
             System.out.println(i + " Matrícula do Aluno: ");
