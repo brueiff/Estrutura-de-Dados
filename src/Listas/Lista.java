@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lista {
 
     Scanner leia = new Scanner(System.in);
-    private int[] valores;
+    int[] valores;
     private int tamanho;
 
     public Lista(int tam) {
@@ -29,6 +29,31 @@ public class Lista {
             valor = valores[pos];
             valores[pos] = 0;
             return valor;
+        }
+        return -1;
+    }
+
+    public void vazia() {
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] == 0) {
+                System.out.println("Posição livre: " + i);
+            }
+        }
+    }
+
+    public void listar() {
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] > 0) {
+                System.out.println(valores[i]);
+            }
+        }
+    }
+
+    public int listarUm(int valor) {
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] == valor) {
+                System.out.println("Posição: " + i + " Valor: " + valores[i]);
+            }
         }
         return -1;
     }
