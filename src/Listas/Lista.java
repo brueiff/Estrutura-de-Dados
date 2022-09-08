@@ -22,7 +22,6 @@ public class Lista {
         }
         return -1;
     }
-
     public int Remove(int pos) {
         int valor;
         if (pos > 0 && pos < valores.length) {
@@ -53,6 +52,30 @@ public class Lista {
         for (int i = 0; i < valores.length; i++) {
             if (valores[i] == valor) {
                 System.out.println("Posição: " + i + " Valor: " + valores[i]);
+            }
+        }
+        return -1;
+    }
+
+    public int atualizar(int valorAtual) {
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] == valorAtual) {
+                System.out.println("O Valor " + valores[i] + " já existe, deseja substituir?");
+                System.out.println("Y[Sim] | N[Não]");
+                String A = leia.next();
+                if (A.equalsIgnoreCase("y")) {
+                    System.out.println("Qual valor deseja inserir no lugar de " + valores[i] + "?");
+                    int valorSubstituido = valores[i];
+                    valores[i] = leia.nextInt();
+                    System.out.println("O valor " + valorSubstituido + " foi substituido por " + valores[i]);
+                    break;
+                } else {
+                    System.out.println("Encerrando...");
+                    System.exit(0);
+                }
+            } else {
+                System.out.println("Valor inexistente na lista!");
+                System.exit(0);
             }
         }
         return -1;

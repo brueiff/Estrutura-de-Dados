@@ -7,9 +7,11 @@ public class Sistema {
         lista.Insere(1, 0);
         lista.Insere(2, 1);
         lista.Insere(3, 2);
-        lista.Insere(50, 8);
+        lista.Insere(3, 2);
+        lista.Insere(10, 3);
         lista.listar();
-        lista.vazia();
-        lista.listarUm(3);
+        lista.listarUm(50);
+        lista.atualizar(1);
+        lista.listar();
     }
 }
