@@ -38,15 +38,24 @@ public class Lista {
         return -1;
     }
 
-    public int Remove(int pos) {
+    public int RemovePos(int pos) {
         int valor;
-        if (pos > 0 && pos < valores.length) {
+        if (pos >= 0 && pos < valores.length) {
             valor = valores[pos];
             valores[pos] = 0;
             return valor;
         }
         return -1;
     }
+//    public int RemoveValor(int valorRemovido) {
+//        int valor;
+//        if (pos >= 0 && pos < valores.length) {
+//            valor = valores[pos];
+//            valores[pos] = 0;
+//            return valor;
+//        }
+//        return -1;
+//    }
 
     public int vazia() {
         for (int i = 0; i < valores.length; i++) {
@@ -74,7 +83,7 @@ public class Lista {
         return -1;
     }
 
-    public int atualizar(int valorAtual) {
+    public int atualizaPos(int valorAtual) {
         for (int i = 0; i < valores.length; i++) {
             if (valores[i] == valorAtual) {
                 System.out.println("O Valor " + valores[i] + " já existe, deseja substituir?");
