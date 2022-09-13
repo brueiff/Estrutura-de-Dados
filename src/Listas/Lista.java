@@ -15,13 +15,29 @@ public class Lista {
         }
     }
 
-    public int Insere(int valor, int pos) {
-        if (pos >= 0 && pos < valores.length) {
+    public int Insere2(int valor, int pos) {
+        if (pos < 0 || pos >= valores.length || valores[pos] == 0) {
+            return -1;
+        } else {
             valores[pos] = valor;
             return valor;
         }
+    }
+
+    public int Insere(int valor, int pos) {
+        if (pos >= 0 && pos < valores.length && valores[pos] == 0) {
+            valores[pos] = valor;
+            return valor;
+        } else if (pos >= 0 && pos < valores.length && valores[pos] != 0) {
+            int pos_vazia = vazia();
+            if (pos_vazia != -1) {
+                valores[pos_vazia] = valor;
+                return valor;
+            }
+        }
         return -1;
     }
+
     public int Remove(int pos) {
         int valor;
         if (pos > 0 && pos < valores.length) {
@@ -32,12 +48,13 @@ public class Lista {
         return -1;
     }
 
-    public void vazia() {
+    public int vazia() {
         for (int i = 0; i < valores.length; i++) {
             if (valores[i] == 0) {
-                System.out.println("Posição livre: " + i);
+                return i;
             }
         }
+        return -1;
     }
 
     public void listar() {
