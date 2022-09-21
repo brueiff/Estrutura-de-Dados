@@ -3,11 +3,11 @@ package ListaLigadaAula;
 public class Sistema {
 
     public static void main(String[] args) {
-        No no = new No();
-        no.elemento = "Ana";
-        no.prox = new No();
-        no.prox.elemento = "Bia";
-        System.out.println(no + " - " + no.elemento + " - " + no.prox);
-        System.out.println(no.prox + " - " + no.prox.elemento + " - " + no.prox.prox);
+        No no = new No("maria");
+        no.setProx(new No("Ana"));
+        System.out.println("Elemento: " + no.getElemento());
+        System.out.println("Próximo: " + no.getProx());
+        System.out.println("Elemento: " + no.getProx().getElemento());
+        System.out.println("Próximo: " + no.getProx().getProx());
     }
 }
